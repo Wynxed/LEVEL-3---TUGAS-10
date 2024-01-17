@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Produk</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Edit Produk</h1>
+    </header>
+
+    <div class="container">
+        <form action="/update/<%= produk._id %>" method="post">
+            <div class="container-grid-edit">
+                <div class="container-items">
+                    <div class="grid-items">
+                        <label for="nama_produk">Nama Produk:</label><br />
+                        <input type="text" id="nama_produk" name="nama_produk" placeholder="Edit nama produk"
+                            required><br />
+                        <label for="keterangan">Keterangan:</label><br />
+                        <textarea id="keterangan" name="keterangan" placeholder="Edit keterangan"
+                            required></textarea><br />
+                        <label for="harga">Harga:</label><br />
+                        <input type="number" id="harga" name="harga" placeholder="Edit harga" required><br />
+                        <label for="jumlah">Jumlah:</label><br />
+                        <input type="number" id="jumlah" name="jumlah" placeholder="Edit jumlah barang" required><br />
+                    </div>
+                    <div class="grid-items">
+                        <input type="submit" value="Konfirmasi " class="button-submit">
+                    </div>
+                </div>
+                <div class="grid-items-list-button">
+                    <a href="/">Kembali</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

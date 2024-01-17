@@ -1,0 +1,174 @@
+* {
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    padding: 0;
+    cursor: default;
+    text-align: center;
+}
+
+html {
+    background-color: #7FC7D9;
+}
+
+header {
+    text-align: center;
+    padding: 2rem;
+    color: #FAC44A;
+    background-color: #365486;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+p {
+    color: #172742;
+}
+
+label {
+    color: #F29839;
+}
+
+.container {
+    display: grid;
+    grid-template-rows: auto;
+}
+
+.container-grid {
+    display: grid;
+    grid-template-columns: 30% auto;
+    grid-gap: 10px;
+    border-radius: .5rem;
+    padding: 10px;
+}
+
+.container-grid-edit {
+    display: grid;
+    grid-template-rows: auto;
+    grid-gap: 10px;
+    border-radius: .5rem;
+    padding: 10px 30%;
+}
+
+.container-items {
+    background: #365486;
+    border-radius: .5rem;
+}
+
+.container-items2 {
+    border: 3px solid #365486;
+    background: #F29839;
+    border-radius: .5rem;
+}
+
+.container-item-list {
+    display: grid;
+    grid-template-columns: 33% auto 33%;
+    grid-template-rows: 25% 25% 25% 25%;
+    grid-gap: 10px;
+    background: transparent;
+    border-radius: .5rem;
+}
+
+input[type=text],
+input[type=number] {
+    margin: 1.2rem 0 1rem;
+    width: 70%;
+    border-radius: 10px;
+    border: none;
+    font-size: 20px;
+    padding: 9px;
+    box-sizing: border-box;
+}
+
+textarea {
+    margin: 1.2rem 0 1rem;
+    width: 70%;
+    border-radius: 10px;
+    border: none;
+    resize: none;
+    height: 6rem;
+    padding: 10px 0;
+    font-size: 20px;
+}
+
+input::placeholder,
+textarea::placeholder {
+    font-size: 80%;
+}
+
+.grid-items {
+    padding: 1.2rem 5rem 2rem;
+}
+
+.grid-items-list-button {
+    padding: 1.2rem 0 2rem;
+}
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+    color: #F29839;
+}
+
+a.edit, a.hapus {
+    color: #FAC44A;
+    font-weight: bold;
+}
+
+.grid-items-list-button {
+    margin-top: 10px;
+    color: #fff;
+    border: none;
+    background-color: #365486;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 6px;
+}
+
+.button-submit {
+    color: #fff;
+    border: none;
+    background-color: #F29839;
+    padding: 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 6px;
+    width: 100%;
+}
+
+
+
+
+@media (max-width: 1100px) {
+    .grid-item {
+        width: 100%;
+        margin: 0;
+    }
+
+    .flex-container {
+        margin: 2rem 2% 0 2%;
+    }
+
+    .alamat {
+        font-size: 90%;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    h1 {
+        font-size: 2rem
+    }
+
+    h3 {
+        font-size: 1rem
+    }
+}
+
+@media (max-width: 400px) {
+    .link {
+        padding: 6rem;
+    }
+}

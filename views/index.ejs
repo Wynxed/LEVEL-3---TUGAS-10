@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Produk</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+    <!DOCTYPE html>
+    <html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <link href="style.css" rel="stylesheet" type="text/css" />
+        <title>Home</title>
+        <style>
+        </style>
+    </head>
+
+    <body>
+
+        <header>
+            <h1>Daftar Produk</h1>
+        </header>
+
+        <div class="container">
+            <form action="/add" method="post">
+                <div class="container-grid">
+                    <div class="container-items">
+                        <div class="grid-items">
+                            <label for="nama_produk">Nama Produk:</label><br />
+                            <input type="text" id="nama_produk" name="nama_produk" placeholder="Masukan nama produk"
+                                required><br />
+                            <label for="keterangan">Keterangan:</label><br />
+                            <textarea id="keterangan" name="keterangan" placeholder="Isi keterangan produk"
+                                required></textarea><br />
+                            <label for="harga">Harga:</label><br />
+                            <input type="number" id="harga" name="harga" placeholder="Masukan harga" required><br />
+                            <label for="jumlah">Jumlah:</label><br />
+                            <input type="number" id="jumlah" name="jumlah" placeholder="Masukan jumlah barang"
+                                required><br />
+                        </div>
+                        <div class="grid-items">
+                            <input type="submit" value="Tambah" class="button-submit">
+                        </div>
+                    </div>
+                    <div class="container-item-list">
+                        <% produkList.forEach(produk=> { %>
+                            <div class="container-items2">
+                                <div class="grid-items">
+                                    <div class="grid-item-list">
+                                        <p>
+                                            <strong>
+                                                <%= produk.nama_produk %>
+                                            </strong>
+                                        </p>
+                                        <p>
+                                            <%= produk.keterangan %>
+                                        </p>
+                                        <p>Harga: <%= produk.harga %>
+                                        </p>
+                                        <p>Jumlah: <%= produk.jumlah %>
+                                        </p>
+                                    </div>
+                                    <div class="grid-items-list-button">
+                                        <a class="edit" href="/edit/<%= produk._id %>">Edit |</a>
+                                        <a class="hapus" href="/delete/<%= produk._id %>">Hapus</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <% }); %>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        </div>
+
+    </body>
+
+    </html>
